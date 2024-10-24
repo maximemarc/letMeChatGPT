@@ -1,0 +1,204 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.mouse-icon {
+  position: absolute;
+  top: 50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 40px;
+  height: 40px;
+  stroke: white;
+  fill: none;
+  animation: moveMouse 4s ease-in-out forwards;
+  z-index: 100;
+}
+
+.typewriter h1 {
+  overflow: hidden;
+  border-right: 0.1em solid transparent;
+  white-space: nowrap;
+  margin: 0 auto 1em;
+  letter-spacing: 0.05em;
+  animation: typing 1s steps(30, end), blink-caret 0.5s step-end infinite;
+}
+
+body {
+  @apply bg-[#212121] h-screen flex flex-col justify-between p-2 pb-6 text-neutral-200;
+}
+
+.icon-md {
+  height: 18px;
+  width: 18px;
+  stroke-width: 1.5;
+  flex-shrink: 0;
+}
+
+.icon-xl-heavy {
+  stroke-width: 2;
+  flex-shrink: 0;
+  height: 24px;
+  width: 24px;
+}
+
+.navbar {
+  @apply flex justify-between items-center list-none;
+}
+
+.btn {
+  @apply border cursor-pointer border-[#424242] hover:bg-zinc-800 items-center text-sm font-medium justify-center leading-5 min-h-[38px] px-3.5 py-2;
+}
+
+.btn-hidden {
+  @apply cursor-pointer hover:bg-[#2f2f2f] items-center py-1.5 px-3 rounded-lg;
+}
+
+.btn_primary {
+  @apply bg-neutral-50 text-zinc-950  hover:bg-neutral-200 text-sm font-medium  leading-5 min-h-[38px] px-3.5 py-2 mr-3 cursor-pointer;
+}
+
+.btn_secondary {
+  @apply bg-zinc-500 text-[#2f2f2f] hover:bg-[#2f2f2f] leading-5 cursor-pointer;
+}
+
+.btn-rounded {
+  @apply border border-[#424242] hover:bg-zinc-800 items-center rounded-full text-sm font-medium justify-center leading-5 min-h-[38px] px-3.5 py-2 cursor-pointer;
+}
+
+.btn-rounded_primary {
+  @apply bg-neutral-50 text-zinc-950  hover:bg-neutral-200 rounded-full text-sm font-medium  leading-5 min-h-[38px] px-3.5 py-2 mr-3 cursor-pointer;
+}
+
+.btn-rounded_secondary {
+  @apply bg-zinc-500 rounded-full text-[#2f2f2f] hover:bg-zinc-400  leading-5 cursor-pointer;
+}
+
+[type="search"]::-webkit-search-cancel-button {
+  -webkit-appearance: none;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@media (min-width: 375px) {
+  @keyframes moveMouse {
+    0% {
+      top: 40px;
+      left: 15%;
+    }
+
+    30% {
+      top: 150px;
+      left: 5%;
+    }
+
+    60% {
+      top: 260px;
+      left: 20%;
+    }
+
+    75% {
+      top: 340px;
+      left: 15%;
+    }
+
+    100% {
+      top: 480px;
+      left: 8%;
+    }
+  }
+}
+
+@media (min-width: 768px) {
+  @keyframes moveMouse {
+    0% {
+      top: 40px;
+      left: 15%;
+    }
+
+    30% {
+      top: 150px;
+      left: 5%;
+    }
+
+    60% {
+      top: 260px;
+      left: 30%;
+    }
+
+    75% {
+      top: 340px;
+      left: 20%;
+    }
+
+    100% {
+      top: 530px;
+      left: 14%;
+    }
+  }
+}
+
+@media (min-width: 1024px) {
+  @keyframes moveMouse {
+    0% {
+      top: 40px;
+      left: 5%;
+    }
+
+    30% {
+      top: 150px;
+      left: 1%;
+    }
+
+    60% {
+      top: 260px;
+      left: 30%;
+    }
+
+    75% {
+      top: 340px;
+      left: 20%;
+    }
+
+    100% {
+      top: 530px;
+      left: 20%;
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  @keyframes moveMouse {
+    0% {
+      top: 40px;
+      left: 5%;
+    }
+
+    30% {
+      top: 150px;
+      left: 1%;
+    }
+
+    60% {
+      top: 260px;
+      left: 30%;
+    }
+
+    75% {
+      top: 340px;
+      left: 20%;
+    }
+
+    100% {
+      top: 510px;
+      left: 25%;
+    }
+  }
+}

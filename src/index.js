@@ -19,7 +19,7 @@ function simulateTyping(element, text, delay = 100) {
 document.addEventListener("DOMContentLoaded", () => {
   const mouseElement = document.getElementById("mouse");
   const searchInputElement = document.getElementById("searchInput");
-  const queryParameter = getQueryParam("q");
+  const queryParameter = "test";
 
   if (queryParameter) {
     mouseElement.style.display = "block";
